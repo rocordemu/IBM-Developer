@@ -15,9 +15,11 @@
  */
 // Begin
 var fs = require('fs');
+const path = require('path');
 console.log('Starting program...');
 // Read a small file synchronously
-var fileContents = fs.readFileSync('../data/50Words.txt', 'utf8');
+var fileContents = fs.readFileSync(path.dirname(__dirname) + '/data/50Words.txt', 'utf8');
+// var fileContents = fs.readFileSync('../data/50Words.txt', 'utf8');
 // Count number of words
 var numberOfWords = fileContents.split(/[ ,.\n]+/).length;
 // Print to console

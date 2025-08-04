@@ -15,9 +15,11 @@
  */
 // Begin
 var fs = require('fs');
+const path = require('path');
 console.log('Starting program...');
 // Read a small file asynchronously
-fs.readFile('../data/50Words.txt', 'utf8', function(err, fileContents) {
+fs.readFile(path.dirname(__dirname) + '/data/50Words.txt', 'utf8', function(err, fileContents) {
+// fs.readFile('../data/50Words.txt', 'utf8', function(err, fileContents) {
     // If error occurred, rethrow error
     if (err) throw err;
     // Count number of words
